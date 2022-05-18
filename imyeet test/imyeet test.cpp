@@ -38,6 +38,8 @@ int  main(_In_ HINSTANCE hInstance,
 		imyeet::begin("ImYeet Test", true, IM_COL32(15,15,15,255), ImVec2(500,500));
 		imyeet::checkbox("imyeet", c);
 
+		if (imyeet::button("imbutton", ImVec2(17,65)))
+			std::cout << "clicked" << std::endl;
 		imyeet::end();
 		//drawings
 		device->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, clear_color, 1.0f, 0);

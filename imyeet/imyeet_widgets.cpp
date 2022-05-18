@@ -29,6 +29,19 @@ bool imyeet::checkbox(std::string m_text, bool& is_checked)
 	m_engine->add_rect(m_rect, IM_COL32(55,55,55,255), is_checked, 2);
 	m_paddingx += 18;
 	m_engine->add_text(m_text.c_str(), ImVec2(m_paddingx, m_paddingy), IM_COL32(255,255,255,255));
+	m_paddingx += 100 + m_text.size();
+
+	return clicked;
+}
+
+bool imyeet::button(std::string m_text, ImVec2 m_size, bool b_fillbox)
+{
+	auto m_rect = ImVec4(m_paddingx, m_paddingy, m_size.x, m_size.y);
+	bool clicked = in_cursor(m_rect) && inputmanager::is_key_up(VK_LBUTTON);
+	m_engine->add_rect(m_rect, IM_COL32(55, 55, 55, 255), b_fillbox, 2);
+	m_paddingx += 3;
+	m_engine->add_text(m_text.c_str(), ImVec2(m_paddingx, m_paddingy), IM_COL32(255, 255, 255, 255));
+	m_paddingx += m_size.y + 10;
 	return clicked;
 }
 
