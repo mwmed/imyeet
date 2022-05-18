@@ -16,6 +16,9 @@
     <ClInclude Include="imyeet_widgets.h">
       <Filter>imyeet</Filter>
     </ClInclude>
+    <ClInclude Include="yeet_inputsystem.h">
+      <Filter>imyeet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="imyeet.cpp">
@@ -25,6 +28,9 @@
       <Filter>imyeet</Filter>
     </ClCompile>
     <ClCompile Include="imyeet_widgets.cpp">
+      <Filter>imyeet</Filter>
+    </ClCompile>
+    <ClCompile Include="yeet_inputsystem.cpp">
       <Filter>imyeet</Filter>
     </ClCompile>
   </ItemGroup>

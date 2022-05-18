@@ -23,11 +23,13 @@
     <ClInclude Include="imyeet_engine.h" />
     <ClInclude Include="imyeet_includes.h" />
     <ClInclude Include="imyeet_widgets.h" />
+    <ClInclude Include="yeet_inputsystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="imyeet.cpp" />
     <ClCompile Include="imyeet_engine.cpp" />
     <ClCompile Include="imyeet_widgets.cpp" />
+    <ClCompile Include="yeet_inputsystem.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
