@@ -31,6 +31,8 @@ namespace imyeet {
 
 		GetCursorPos(&mouse_pos);
 		ScreenToClient(m_hwnd,&mouse_pos);
+
+		inputmanager::on_update();
 	}
 	void on_draw()
 	{

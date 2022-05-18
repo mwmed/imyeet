@@ -22,13 +22,14 @@ void imyeet::begin(std::string m_text, bool d_border, ImU32 border_color, ImVec2
 bool imyeet::checkbox(std::string m_text, bool& is_checked)
 {
 	auto m_rect = ImVec4(m_paddingx, m_paddingy, 15, 15);
-	if (in_cursor(m_rect))
+	bool clicked = in_cursor(m_rect) && inputmanager::is_key_up(VK_LBUTTON);
+	if (clicked)
 		is_checked = !is_checked;
 
 	m_engine->add_rect(m_rect, IM_COL32(55,55,55,255), is_checked, 2);
 	m_paddingx += 18;
 	m_engine->add_text(m_text.c_str(), ImVec2(m_paddingx, m_paddingy), IM_COL32(255,255,255,255));
-	return false;
+	return clicked;
 }
 
 void imyeet::end()
