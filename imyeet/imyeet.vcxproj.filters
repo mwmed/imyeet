@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="imyeet">
+      <UniqueIdentifier>{caf43253-c235-46b5-8901-924bf2426c7b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="imyeet_includes.h" />
+    <ClInclude Include="imyeet.h">
+      <Filter>imyeet</Filter>
+    </ClInclude>
+    <ClInclude Include="imyeet_engine.h">
+      <Filter>imyeet</Filter>
+    </ClInclude>
+    <ClInclude Include="imyeet_widgets.h">
+      <Filter>imyeet</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="imyeet.cpp">
+      <Filter>imyeet</Filter>
+    </ClCompile>
+    <ClCompile Include="imyeet_engine.cpp">
+      <Filter>imyeet</Filter>
+    </ClCompile>
+    <ClCompile Include="imyeet_widgets.cpp">
+      <Filter>imyeet</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
