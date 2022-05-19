@@ -20,6 +20,7 @@ int  main(_In_ HINSTANCE hInstance,
 	imyeet::on_create(window->get_window(), device);
 
 	bool c = true;
+	bool c2 = false;
 	bool done = false;
 
 	while (!done) {
@@ -36,10 +37,23 @@ int  main(_In_ HINSTANCE hInstance,
 		imyeet::on_frame_begin();
 
 		imyeet::begin("ImYeet Test", true, IM_COL32(15,15,15,255), ImVec2(500,500));
-		imyeet::checkbox("imyeet", c);
 
-		if (imyeet::button("imbutton", ImVec2(17,65)))
+		imyeet::begin_child(ImVec2(350, 250));
+
+		if (imyeet::button("button in child", ImVec2(15, 120), false))
+			std::cout << "clicked button in child" << std::endl;
+
+		if (imyeet::button("button in child2", ImVec2(15, 120), false))
+			std::cout << "clicked button in child" << std::endl;
+
+		imyeet::end_child();
+		imyeet::checkbox("imyeet", c);
+		if (imyeet::button("imbutton", ImVec2(17, 65)))
 			std::cout << "clicked" << std::endl;
+		imyeet::checkbox("imyeet2", c2);
+
+	
+	
 		imyeet::end();
 		//drawings
 		device->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, clear_color, 1.0f, 0);

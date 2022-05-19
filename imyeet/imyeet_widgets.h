@@ -18,5 +18,11 @@ namespace imyeet {
 	bool checkbox(std::string m_text, bool& is_checked);
 	bool button(std::string m_text, ImVec2 m_size, bool b_fillbox = true);
 
+	void begin_child(ImVec2 m_size);
+
+	void fix_padding();
+
+	void end_child();
+
 	void end();
 }
